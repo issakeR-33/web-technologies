@@ -11,7 +11,7 @@ ul.berries li {
 }
 
 ul.vegetables li {
-  list-style-image: url("li.svg");
+  list-style-image: url("../style/li.svg");
 }
 
 ul {
