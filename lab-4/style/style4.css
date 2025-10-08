@@ -44,5 +44,5 @@ img + p {
 }
 
 section ~ p {
-    color: red;
+    color: #ff0000;
 }

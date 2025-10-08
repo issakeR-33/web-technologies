@@ -5,7 +5,7 @@
 }
 
 p {
-  color: green;
+  color: #008000;
   text-align: center;
 }
 
@@ -14,24 +14,24 @@ div {
 }
 
 
-.red {
-  color: red;
+.text-color {
+  color: #ff0000;
 }
 
 .nowrap {
   white-space: nowrap;
 }
 
-#special {
+#special-text {
   font-style: italic;
   font-weight: bold;
 }
 
 .shadow {
-  text-shadow: 5px -5px 3px red;
+  text-shadow: 5px -5px 3px #ff0000;
 }
 
-.decor {
+.crossed-out-text {
   text-decoration: line-through;
   text-transform: uppercase;
   text-indent: 50px;

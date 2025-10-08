@@ -3,12 +3,12 @@ body {
   font-size: 20px;
 }
 
-.center {
+.position-center {
   text-align: center;
 }
 
 .color {
-  color: red;
+  color: #ff0000;
   font-size: 32px;
 }
 
@@ -24,11 +24,11 @@ body {
   border: none;
   height: 6px;
   width: 85%;
-  background-color: green;
+  background-color: #008000;
 }
 
-#tip {
+#pcscript {
   text-align: center;
-  color: gray;
+  color: #898989;
   font-style: italic;
 }
