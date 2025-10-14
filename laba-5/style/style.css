@@ -1,0 +1,94 @@
+/* --- div.icons --- */
+.icons {
+    background-color: rgb(255, 165, 0);
+    width: 500px;
+    padding: 20px;
+    color: white;
+}
+ h1 {
+    font-size: 25px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+
+ul {
+    list-style-position: inside;
+    padding-left: 0;
+    margin: 0;
+}
+
+
+ul > li {
+    background-color: rgb(103, 158, 128);
+    background-image: url("../icons/rule.png");
+    background-repeat: no-repeat;
+    background-position: 5px top;
+    background-size: 40px 40px;
+    padding: 0px 20px 0px 50px;
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+ul ul > li {
+    background-color: rgb(153, 180, 102);
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    background-size: 40px px;
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 10px;
+    padding: 0px 20px 0px 50px;
+    list-style: none;
+}
+
+
+span {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+
+ul > li > span {
+    font-size: 20px;
+    font-weight: 700;
+    background-color: rgb(199, 124, 106); 
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+ul ul > li > span {
+    background-color: rgb(218, 106, 32);
+    margin-bottom: 0px;
+}
+
+ul ul > li:nth-child(1) {
+    background-image: url("../icons/ad_units.png");
+}
+ul ul > li:nth-child(2) {
+    background-image: url("../icons/airplane_ticket.png");
+}
+ul ul > li:nth-child(3) {
+    background-image: url("../icons/hotel.png");
+}
+ul ul > li:nth-child(4) {
+    background-image: url("../icons/car_rental.png");
+}
+
+/* --- Іконки для другого підсписку: Відпочинок --- */
+ul > li:nth-child(2) ul > li:nth-child(1) {
+    background-image: url("../icons/local_bar.png");
+}
+
+ul > li:nth-child(2) ul > li:nth-child(2) {
+    background-image: url("../icons/casino.png");
+}
+
+ul > li:nth-child(2) ul > li:nth-child(3) {
+    background-image: url("../icons/museum.png");
+}
+
+ul > li:nth-child(2) ul > li:nth-child(4) {
+    background-image: url("../icons/festival.png");
+}
+
