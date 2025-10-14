@@ -19,6 +19,7 @@ ul {
 }
 
 
+
 ul > li {
     background-color: rgb(103, 158, 128);
     background-image: url("../icons/rule.png");
@@ -75,7 +76,7 @@ ul ul > li:nth-child(4) {
     background-image: url("../icons/car_rental.png");
 }
 
-/* --- Іконки для другого підсписку: Відпочинок --- */
+
 ul > li:nth-child(2) ul > li:nth-child(1) {
     background-image: url("../icons/local_bar.png");
 }
