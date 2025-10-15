@@ -1,0 +1,137 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  padding: 20px;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #fafafa;
+}
+
+legend {
+  color: #333;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[list],
+textarea,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+input[list]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #0066cc;
+  box-shadow: 0 0 3px #0066cc;
+}
+
+
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+label input[type="radio"],
+label input[type="checkbox"] {
+  display: inline;
+  margin-right: 5px;
+}
+
+p {
+  margin: 15px 0 10px;
+  color: #333;
+  font-weight: bold;
+}
+
+button {
+  background-color: #0066cc;
+  color: white;
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 3px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #0052a3;
+}
+
+
+hr {
+  margin: 40px 0;
+  border: none;
+  border-top: 2px solid #ccc;
+}
+
+a {
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
