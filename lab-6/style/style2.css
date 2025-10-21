@@ -1,0 +1,159 @@
+body{
+    margin: 0px;
+    box-shadow: 0 -1px 0px rgba(0, 0, 0, 0.30);
+}
+
+header{
+      margin-top: 10px;
+      margin-bottom: 25px;
+      padding-bottom: 20px;
+}
+
+.wrapper{
+      width: 1140px;
+      padding: 20px;
+      margin: 20px auto;
+      background-color: #ffffff;
+      box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+    margin: 0px;
+    padding: 15px;
+}
+
+li{
+    margin: 15px;
+    float: left;
+}
+
+li a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+    background: rgb(13, 209, 62);
+    border-radius: 50px;
+}
+
+.nav-logo{
+    float: left;
+}
+
+.navbar{
+    float: right;
+}
+
+main{
+    margin-top: 70px;
+    clear: both;
+}
+
+.blocks-container {
+  padding-top: 10px;
+}
+
+.block {
+  float: left;
+  width: 300px;
+  min-height: 140px;
+  box-sizing: border-box;
+  padding: 15px;
+  margin: 20px;
+  font-size: 14px;
+}
+.block p {
+  margin: 0;
+}
+
+.block-1 {
+  border: 2px solid #6c6;
+  border-radius: 15px;
+}
+
+.block-2 {
+  border: 2px solid #6c6;
+  border-radius: 40px;
+}
+
+.block-3 {
+  border: 2px solid #6c6;
+  border-radius: 40px 0 40px 0;
+}
+
+.block-4 {
+  border: 10px solid #6b9;
+  border-right-color: #386;
+  border-bottom-color: #386;
+  border-radius: 10px;
+}
+
+.block-5 {
+  border: 10px solid #383;
+  border-right-color: #262;
+  border-bottom-color: #262;
+  border-radius: 10px 40% 10px 40%;
+}
+
+.block-6 {
+  border: 10px solid #6b9;
+  border-top-color: #386;
+  border-left-color: #386;
+  border-radius: 40% 10px 40% 10px;
+}
+
+.block-7 {
+  border-image-slice: 28 25 27 27;
+  border-image-width: 20px 20px 20px 20px;
+  border-image-outset: 0px 0px 0px 0px;
+  border-image-repeat: stretch stretch;
+  border-image-source: url('border-image-1.png');
+  border-style: solid;
+}
+
+.block-8 {
+  float: left;
+  margin: 20px;
+  padding: 20px;
+  width: 300px;
+  border-image-slice: 13 13 13 13;
+  border-image-width: 15px 15px 15px 15px;
+  border-image-outset: 0px 0px 0px 0px;
+  border-image-repeat: round;
+  border-image-source: url('https://mdn.github.io/css-examples/tools/border-image-generator/border-image-1.png');
+  border-style: solid;
+}
+
+.block-9 {
+  float: left;
+  margin: 20px;
+  padding: 20px;
+  width: 300px;
+  border-image-slice: 27 27 27 27;
+  border-image-width: 20px 20px 20px 20px;
+  border-image-outset: 0px 0px 0px 0px;
+  border-image-repeat: round round;
+  border-image-source: url('https://mdn.github.io/css-examples/tools/border-image-generator/border-image-1.png');
+  border-style: solid;
+}
+
+.block-11 {
+  border: 12px solid transparent;
+  border-image: url('circle.png') 8 round;
+}
+
+.block-10 {
+  border-image-slice: 27 27 27 27;
+  border-image-width: 20px 20px 20px 20px;
+  border-image-outset: 0px 0px 0px 0px;
+  border-image-repeat: stretch stretch;
+  border-image-source: url(paint.png);
+}
+
+.block-12 {
+  border-image-slice: 27 34 27 18;
+  border-image-width: 20px 20px 20px 20px;
+  border-image-outset: 0px 0px 0px 0px;
+  border-image-repeat: stretch stretch;
+  border-image-source: url(long-round.png);
+}
