@@ -65,41 +65,45 @@ main{
 .block p {
   margin: 0;
 }
-
 .block-1 {
-  border: 2px solid #6c6;
-  border-radius: 15px;
+    border: 5px solid greenyellow;
+    padding: 10px;
+    border-radius:10%;
 }
 
 .block-2 {
-  border: 2px solid #6c6;
-  border-radius: 40px;
+    border: 5px solid greenyellow;
+    padding: 10px;
+    border-radius: 50px 0px ;
 }
 
 .block-3 {
-  border: 2px solid #6c6;
-  border-radius: 40px 0 40px 0;
+    border: 5px solid greenyellow;
+    padding: 10px;
+    border-radius: 20% 50% ;
 }
 
 .block-4 {
-  border: 10px solid #6b9;
-  border-right-color: #386;
-  border-bottom-color: #386;
-  border-radius: 10px;
+    border: 20px solid greenyellow;
+    border-top-color:green;
+    border-bottom-color: green;;
+    padding: 10px;
+    border-radius: 50px 50px ;
 }
 
 .block-5 {
-  border: 10px solid #383;
-  border-right-color: #262;
-  border-bottom-color: #262;
-  border-radius: 10px 40% 10px 40%;
+    border: 20px solid greenyellow;
+    border-left-color:green;
+    border-right-color: green;;
+    padding: 10px;
+    border-radius: 40% 10% ;
 }
 
 .block-6 {
-  border: 10px solid #6b9;
-  border-top-color: #386;
-  border-left-color: #386;
-  border-radius: 40% 10px 40% 10px;
+    border: 20px solid greenyellow;
+    border-left-color: green;
+    padding: 10px;
+    border-bottom-right-radius: 100% ;
 }
 
 .block-7 {
@@ -107,7 +111,7 @@ main{
   border-image-width: 20px 20px 20px 20px;
   border-image-outset: 0px 0px 0px 0px;
   border-image-repeat: stretch stretch;
-  border-image-source: url('border-image-1.png');
+  border-image-source: url(../img/border-image-1.png);
   border-style: solid;
 }
 
@@ -139,7 +143,7 @@ main{
 
 .block-11 {
   border: 12px solid transparent;
-  border-image: url('circle.png') 8 round;
+  border-image: url(../img/circle.png) 8 round;
 }
 
 .block-10 {
@@ -147,7 +151,7 @@ main{
   border-image-width: 20px 20px 20px 20px;
   border-image-outset: 0px 0px 0px 0px;
   border-image-repeat: stretch stretch;
-  border-image-source: url(paint.png);
+  border-image-source: url(../img/paint.png);
 }
 
 .block-12 {
@@ -155,5 +159,5 @@ main{
   border-image-width: 20px 20px 20px 20px;
   border-image-outset: 0px 0px 0px 0px;
   border-image-repeat: stretch stretch;
-  border-image-source: url(long-round.png);
+  border-image-source: url(../img/long-round.png);
 }
