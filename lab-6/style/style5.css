@@ -101,13 +101,10 @@ main{
 }
 
 .gradient-2 {
-  color: #333;
-  background: linear-gradient(white, white),
-    linear-gradient(to bottom left, blue, orange, white, yellow),
-    linear-gradient(to bottom left, orange, purple, white, green), linear-gradient(white, white);
-  background-size: 50px 50px, 50px 50px, 50px 50px, 50px 50px;
-  background-position: 0 0, 50px 0, 0 50px, 50px 50px;
-  background-repeat: repeat;
+    background: linear-gradient(45deg, green 17%, white 25%, transparent 25%, transparent 75%, orange 75%, blue 95%),
+    linear-gradient(45deg, yellow 17%, white 25%, transparent 25%, transparent 75%, purple 75%, orange 95%);
+    background-size: 50px 50px;
+    background-position: 0 0, 25px 25px;
 }
 
 .gradient-3 {
