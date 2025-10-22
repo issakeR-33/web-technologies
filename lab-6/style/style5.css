@@ -1,0 +1,124 @@
+body{
+    margin: 0px;
+    box-shadow: 0 -1px 0px rgba(0, 0, 0, 0.30);
+}
+
+header{
+      margin-top: 10px;
+      margin-bottom: 25px;
+      padding-bottom: 20px;
+}
+
+.wrapper{
+      width: 1140px;
+      padding: 20px;
+      margin: 20px auto;
+      background-color: #ffffff;
+      box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+    margin: 0px;
+    padding: 15px;
+}
+
+li{
+    margin: 15px;
+    float: left;
+}
+
+li a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+    background: rgb(13, 209, 62);
+    border-radius: 50px;
+}
+
+.nav-logo{
+    float: left;
+}
+
+.navbar{
+    float: right;
+}
+
+main{
+    clear: both;
+}
+
+
+.gradient-container {
+  overflow: auto;
+  padding: 10px;
+}
+
+.gradient-card {
+  float: left;
+  width: 300px;
+  height: 400px;
+  margin: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 20px;
+  color: white;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.gradient-card img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  margin-bottom: 10px;
+  z-index: 2;
+  position: relative;
+}
+
+.gradient-card h3 {
+  margin: 0;
+  padding-top: 5px;
+  z-index: 2;
+  position: relative;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.gradient-card p {
+  font-size: 14px;
+  text-align: justify;
+  z-index: 2;
+  position: relative;
+  text-shadow: 1px 1px 2px #000;
+  padding: 0 10px;
+}
+
+.gradient-1 {
+  background: linear-gradient(to bottom left, orange, blue, yellow, lime);
+}
+
+.gradient-2 {
+  color: #333;
+  background: linear-gradient(white, white),
+    linear-gradient(to bottom left, blue, orange, white, yellow),
+    linear-gradient(to bottom left, orange, purple, white, green), linear-gradient(white, white);
+  background-size: 50px 50px, 50px 50px, 50px 50px, 50px 50px;
+  background-position: 0 0, 50px 0, 0 50px, 50px 50px;
+  background-repeat: repeat;
+}
+
+.gradient-3 {
+  background: repeating-linear-gradient(to right, green 0%, white 10%, blue 10%, yellow 20%);
+}
+
+.gradient-4 {
+  background: linear-gradient(135deg, #ff9900, #ffff00 50%, #00cc00);
+}
+
+.gradient-5 {
+  background-image: linear-gradient(to bottom, red, orange, yellow, green, blue, indigo, violet);
+  background-blend-mode: overlay;
+}
