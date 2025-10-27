@@ -34,7 +34,7 @@ li a{
     padding: 10px;
     background: rgb(13, 209, 62);
     border-radius: 50px;
-}
+}   
 
 .nav-logo{
     float: left;
@@ -63,7 +63,7 @@ main{
 
 .columns-container > p:nth-child(2) img {
   float: left;
-  margin: 0px 15px 10px 15px;
+  margin: 10px 15px 10px 15px;
 }
 
 .columns-container > p:nth-child(3) img {
