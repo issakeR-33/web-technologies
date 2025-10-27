@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #d0d0d0;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #444;
+  z-index: 1000;
+  width: 100%;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.navbar li {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+}
+
+.navbar li.right {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.navbar a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #4caf50;
+}
+
+.navbar .active a {
+  background-color: #4caf50;
+}
+
+.navbar a img {
+  height: 24px;
+  width: 24px;
+  vertical-align: middle;
+}
+
+.navbar .dropdown {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: #555;
+  min-width: 160px;
+  z-index: 1;
+  top: 100%;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.navbar .dropdown li {
+  display: block;
+}
+
+.navbar .dropdown a {
+  padding: 10px 16px;
+  text-align: left;
+}
+
+.navbar .dropdown a img {
+  margin-right: 8px;
+}
+
+.navbar li:hover > .dropdown {
+  display: block;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100%;
+  background-color: #0d6efd;
+  overflow-y: auto;
+  padding-top: 60px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  position: relative;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-bottom: 1px solid #0a58ca;
+}
+
+.sidebar a img {
+  height: 24px;
+  width: 24px;
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
+.sidebar a:hover {
+  background-color: #0056b3;
+}
+
+.sidebar .active > a {
+  background-color: #004080;
+}
+
+.sidebar ul ul {
+  display: none;
+  background-color: #0b5ed7;
+}
+
+.sidebar li:hover > ul {
+  display: block;
+}
+
+.sidebar ul ul ul {
+  background-color: #084298;
+  margin-left: 10px;
+}
+
+.content {
+  margin-left: 240px;
+  padding: 20px;
+}
