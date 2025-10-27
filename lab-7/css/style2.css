@@ -2,3 +2,75 @@
     display: flex;
     align-items: center;
 }
+
+
+.block{
+    margin: 5px;
+}
+
+
+.block-1{
+    width: 130px;
+    height: 150px;
+    background: rgb(68, 68, 183);
+    color: #ffffff;
+    color: #000;
+    text-align: center;
+    border: 2px solid #000;
+    z-index: 3;
+}
+
+.content{
+    background: rgb(68, 68, 183);
+}
+
+.block-2{
+    width: 130px;
+    height: 150px;
+    background: rgb(8, 130, 67);
+    color: #ffffff;
+    text-align: center;
+    border: 2px solid #000;
+    z-index: 2;
+    display: none;
+}
+
+.block-2 .content{
+    background: rgb(8, 130, 67);
+}
+
+
+.block-3{
+    width: 130px;
+    height: 150px;
+    background: rgb(88, 167, 212);
+    color: #ffffff;
+    text-align: center;
+    border: 2px solid #000;
+    display: none;
+}
+
+.block-3 .content{
+    background: rgb(88, 167, 212);
+}
+
+
+.block-1:hover + .block-2 {
+    display: block;
+}
+
+.block-2:hover + .block-3 {
+    display: block;
+}
+
+.wrapper:hover .block-2 {
+    display: block;
+}
+
+.wrapper:hover .block-2:hover + .block-3 {
+    display: block;
+}
+
+.wrapper:hover .block-2:hover {
+    display: block;
+}
