@@ -13,6 +13,7 @@ body {
 }
 
 .navbar ul {
+  font-size: 0;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -20,6 +21,7 @@ body {
 }
 
 .navbar li {
+  font-size: 10px;
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -80,7 +82,7 @@ body {
   margin-right: 8px;
 }
 
-.navbar li:hover > .dropdown {
+.navbar li:hover>.dropdown {
   display: block;
 }
 
@@ -92,7 +94,7 @@ body {
   height: 100%;
   background-color: #0d6efd;
   overflow-y: auto;
-  padding-top: 60px;
+  padding-top: 50px;
 }
 
 .sidebar ul {
@@ -103,6 +105,8 @@ body {
 
 .sidebar li {
   position: relative;
+  padding: 0;
+  margin: 0;
 }
 
 .sidebar a {
@@ -110,7 +114,6 @@ body {
   color: white;
   text-decoration: none;
   padding: 12px 20px;
-  border-bottom: 1px solid #0a58ca;
 }
 
 .sidebar a img {
@@ -124,8 +127,12 @@ body {
   background-color: #0056b3;
 }
 
-.sidebar .active > a {
+.sidebar .active>a {
   background-color: #004080;
+}
+
+.active {
+  margin: 0;
 }
 
 .sidebar ul ul {
@@ -133,7 +140,7 @@ body {
   background-color: #0b5ed7;
 }
 
-.sidebar li:hover > ul {
+.sidebar li:hover>ul {
   display: block;
 }
 
