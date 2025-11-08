@@ -1,0 +1,52 @@
+.box {
+    color: white;
+    font-size: 100px;
+    text-align: center;
+    text-shadow: 4px 4px 0 ghba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.box1 {
+    background: #1abc9c;
+}
+
+.box2 {
+    background: #3498db;
+}
+
+.box3 {
+    background: #9b59b6;
+}
+
+.box4 {
+    background: #e74c3c;
+}
+
+.box5 {
+    background: #f39c12;
+}
+
+.box6 {
+    background: #d35400;
+}
+
+.box7 {
+    background: #2c3e50;
+}
+
+.box8 {
+    background: #7f8c8d;
+}
+
+.box9 {
+    background: #27ae60;
+}
+
+.box10 {
+    background: #2980b9;
+}
+
+.container {
+    display: flex;
+    border: 10px solid gold;
+}
