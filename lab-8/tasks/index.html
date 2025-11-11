@@ -9,10 +9,28 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<header>
-    <!-- navigation menu -->
-</header>
+
 <body>
+
+    <header class="header wrapper">
+        <a href="#"><img src="./pics/image.png" alt="logo" class="header__logo"></a>
+    
+        <input type="checkbox" id="burger-toggle" class="header__burger-toggle">
+        <label for="burger-toggle" class="header__burger-icon">
+            <span></span>
+        </label>
+    
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="#">Home</a></li>
+                <li class="header__nav-item"><a href="#about_us">About Us</a></li>
+                <li class="header__nav-item"><a href="#our_works">Our Works</a></li>
+                <li class="header__nav-item"><a href="#journal">Journal</a></li>
+                <li class="header__nav-item"><a href="#contact_us">Contact</a></li>
+                <li class="header__nav-item-fav"><a href="#contact_us"><img src="./pics/heart.svg" alt="img"></a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="hero-container">
         <div class="hero"> WE'RE KEEPSAKE, A DIGITAL & BRANDING AGENCY</div>
         <p>Specializing in web design, poster, motion video, based in London. We love to turn ideas into beautiful things</p>
@@ -20,23 +38,170 @@
     <div class="works">
         <div class="_top-block">
             <div class="title">OUR AWESOME WORKS</div>
-            <button class="button" >FILTER PORTFOLIO</button>
+            <button class="button">FILTER PORTFOLIO</button>
         </div>
         <div class="_imgs">
-            <div class="row">
-                <img src="img/0b12b4b82e5fb1bec66015bc7d3aa9cf.jpg" alt="">
-                <img src="img/1b62a4704865545859f5737d22827719.jpg" alt="">
-                <img src="img/714007958deb449a834cc5af32451a0f.jpg" alt="">
+            <div class="img-block">
+                <img class="main-image" src="img/0b12b4b82e5fb1bec66015bc7d3aa9cf.jpg" alt="">
+                <div class="content-on-hover">
+                    <div class="circled-image image-1"></div>
+                    <div class="circled-border"></div>
+                    <button class="plus-button">+</button>
+                    <div class="center-items">
+                        <p class="name">(some) Name Surname</p>
+                    </div>
+                    <div class="center-items">
+                        <p class="contactadress">@contactadress</p>
+                    </div>
+                    <div class="center-items buttons">
+                        <button class="action-button">Share</button>
+                        <button class="action-button">Follow</button>
+                    </div>
+                </div>
             </div>
-            <div class="row">
-                <img src="img/faab2324d41fae79ac8a6c34195bdad0.jpg" alt="">
-                <img src="img/a16536e3769bcbc89e4c4c75bb0eda07.jpg" alt="">
-                <img src="img/b196f5ae4e77d2ba4b6962e80c27219b.jpg" alt="">
+            <div class="img-block">
+                <img class="main-image" src="img/1b62a4704865545859f5737d22827719.jpg" alt="">
+                <div class="content-on-hover">
+                    <div class="circled-image image-2"></div>
+                    <div class="circled-border"></div>
+                    <button class="plus-button">+</button>
+                    <div class="center-items">
+                        <p class="name">(some (2)) Name Surname</p>
+                    </div>
+                    <div class="center-items">
+                        <p class="contactadress">@contactadress</p>
+                    </div>
+                    <div class="center-items buttons">
+                        <button class="action-button">Share</button>
+                        <button class="action-button">Follow</button>
+                    </div>
+                </div>
             </div>
-            <div class="row ">
-                <img src="img/bd83ba4adf55b731afa141196a49c43d.jpg" alt="">
-                <img src="img/d0deab6f3158cf3dba61e5e5cd24cc83.jpg" alt="">
-                <img src="img/d9d7a6177f3c2cdfaa94c795d23d8232.jpg" alt="">
+            <div class="img-block">
+                <img class="main-image" src="img/714007958deb449a834cc5af32451a0f.jpg" alt="">
+                <div class="content-on-hover">
+                    <div class="circled-image image-3"></div>
+                    <div class="circled-border"></div>
+                    <button class="plus-button">+</button>
+                    <div class="center-items">
+                        <p class="name">(3) Name Surname</p>
+                    </div>
+                    <div class="center-items">
+                        <p class="contactadress">@contactadress</p>
+                    </div>
+                    <div class="center-items buttons">
+                        <button class="action-button">Share</button>
+                        <button class="action-button">Follow</button>
+                    </div>
+                </div>
+            </div>
+            <div class="img-block">
+                <img class="main-image" src="img/faab2324d41fae79ac8a6c34195bdad0.jpg" alt="">
+                <div class="content-on-hover">
+                    <div class="circled-image image-4"></div>
+                    <div class="circled-border"></div>
+                    <button class="plus-button">+</button>
+                    <div class="center-items">
+                        <p class="name">(4) Name Surname</p>
+                    </div>
+                    <div class="center-items">
+                        <p class="contactadress">@contactadress</p>
+                    </div>
+                    <div class="center-items buttons">
+                        <button class="action-button">Share</button>
+                        <button class="action-button">Follow</button>
+                    </div>
+                </div>
+            </div>
+            <div class="img-block">
+                <img class="main-image" src="img/a16536e3769bcbc89e4c4c75bb0eda07.jpg" alt="">
+                <div class="content-on-hover">
+                    <div class="circled-image image-5"></div>
+                    <div class="circled-border"></div>
+                    <button class="plus-button">+</button>
+                    <div class="center-items">
+                        <p class="name">(5) Name Surname</p>
+                    </div>
+                    <div class="center-items">
+                        <p class="contactadress">@contactadress5</p>
+                    </div>
+                    <div class="center-items buttons">
+                        <button class="action-button">Share</button>
+                        <button class="action-button">Follow</button>
+                    </div>
+                </div>
+            </div>
+            <div class="img-block">
+                <img class="main-image" src="img/b196f5ae4e77d2ba4b6962e80c27219b.jpg" alt="">
+                <div class="content-on-hover">
+                    <div class="circled-image image-6"></div>
+                    <div class="circled-border"></div>
+                    <button class="plus-button">+</button>
+                    <div class="center-items">
+                        <p class="name">(6) Name Surname</p>
+                    </div>
+                    <div class="center-items">
+                        <p class="contactadress">@contactadress6</p>
+                    </div>
+                    <div class="center-items buttons">
+                        <button class="action-button">Share</button>
+                        <button class="action-button">Follow</button>
+                    </div>
+                </div>
+            </div>
+            <div class="img-block">
+                <img class="main-image" src="img/bd83ba4adf55b731afa141196a49c43d.jpg" alt="">
+                <div class="content-on-hover">
+                    <div class="circled-image image-7"></div>
+                    <div class="circled-border"></div>
+                    <button class="plus-button">+</button>
+                    <div class="center-items">
+                        <p class="name">(7) Name Surname</p>
+                    </div>
+                    <div class="center-items">
+                        <p class="contactadress">@contact_adress</p>
+                    </div>
+                    <div class="center-items buttons">
+                        <button class="action-button">Share</button>
+                        <button class="action-button">Follow</button>
+                    </div>
+                </div>
+            </div>
+            <div class="img-block">
+                <img class="main-image" src="img/d0deab6f3158cf3dba61e5e5cd24cc83.jpg" alt="">
+                <div class="content-on-hover">
+                    <div class="circled-image image-8"></div>
+                    <div class="circled-border"></div>
+                    <button class="plus-button">+</button>
+                    <div class="center-items">
+                        <p class="name">(8) Name Surname</p>
+                    </div>
+                    <div class="center-items">
+                        <p class="contactadress">@contactadress</p>
+                    </div>
+                    <div class="center-items buttons">
+                        <button class="action-button">Share</button>
+                        <button class="action-button">Follow</button>
+                    </div>
+                </div>
+            </div>
+            <div class="img-block">
+                <img class="main-image" src="img/d9d7a6177f3c2cdfaa94c795d23d8232.jpg" alt="">
+                <div class="content-on-hover">
+                    <div class="circled-image image-9"></div>
+                    <div class="circled-border"></div>
+                    <button class="plus-button">+</button>
+                    <div class="center-items">
+                        <p class="name">(9) Name Surname</p>
+                    </div>
+                    <div class="center-items">
+                        <p class="contactadress">@contactadress9</p>
+                    </div>
+                    <div class="center-items buttons">
+                        <button class="action-button">Share</button>
+                        <button class="action-button">Follow</button>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="contact-us">
@@ -48,109 +213,16 @@
         <div class="_top-block">
             <div class="title">What do we do</div>
         </div>
-        <p>Maescenas sed diam eget risus varius blandit sit amet manga. Morbi leo risus, porta ac consectetur ac. vestibulum at eros</p>
+        <p>Some text</p>
 
         <!-- list(?) of items -->
-
-        <div class="card-container">
-            <div class="card">
-            <div class="card-logo">
-                <img src="../tasks/img/web-design.png" alt="">
-             </div>
-             <p>WEB DESIGN</p>
-             <p>Donec elit non mi porta gravida eu eget metus. Aenean eu leo quam. Pellentesque ornare sem por quam venenatis vestibulum.</p>
-            </div>
-
-            <div class="card">
-                <div class="card-logo">
-                <img src="../tasks/img/animation.png" alt="">
-                </div>
-                <p>MOTION VIDEO</p>
-                <p>Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur.</p>
-            </div>
-                <div class="card">
-                <div class="card-logo">
-                <img src="../tasks/img/print.png" alt="">
-                </div>
-                <p>PRINT DESIGN</p>
-                <p>Maecenas sed diam eget risus varius blandit amet non magna. Nullam id dolor id nibh ultricies vehiculaelit praesent commodo</p>
-             </div>
-            <div class="card">
-                <div class="card-logo">
-                <img src="../tasks/img/layers.png" alt="">
-                </div>
-                <p>ILLUSTRATION</p>
-                <p>Cum sociis natoque penatibus et dis parturient montes, nascetur ridiculus mus. Morbi leo risus, porta ac consectetur ac at.</p>
-             </div>
-        </div>
 
     </div>
     <div class="journal">
         <div class="_top-block">
             <div class="title">From the journal</div>
         </div>
-         <p class="section-subtitle">
-              Cum sociis natoque penatibus et magnis dis parturient montes,
-              nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor
-              fringilla.
-            </p>
-         <div class="journal-grid">
-              <article class="journal-card">
-                <div class="card-image">
-                  <img src="../tasks/img/Map_Folded_Flyer_Mockup_5.jpg" alt="Blog post image 1" />
-                </div>
-                <div class="card-content">
-                  <p class="card-meta">OCT 13, 2014 / IDENTITY</p>
-                  <h3 class="card-title">SOLLICITUDIN TORTOR INCEPTOS</h3>
-                  <p class="card-snippet">
-                    Maecenas faucibus mollis interdum. Cum sociis natoque
-                    penatibus et magnis dis parturient montes, nascetur
-                    ridiculus mus. Nullam id dolor id nibh.
-                  </p>
-                </div>
-              </article>
-              <article class="journal-card">
-                <div class="card-image">
-                  <img src="../tasks/img/Free_Poster_Mockup_1.jpg" alt="Blog post image 2" />
-                </div>
-                <div class="card-content">
-                  <p class="card-meta">OCT 23, 2014 / BRANDING</p>
-                  <h3 class="card-title">AMET INCEPTOS FRINGILLA FUSCE</h3>
-                  <p class="card-snippet">
-                     Maecenas faucibus mollis interdum. Cum sociis natoque
-                    penatibus et magnis dis parturient montes, nascetur
-                    ridiculus mus. Nullam id dolor id nibh.
-                  </p>
-                </div>
-              </article>
-              <article class="journal-card">
-                <div class="card-image">
-                  <img src="../tasks/img/Coffee_Cup_Mockup_3.jpg" alt="Blog post image 3" />
-                </div>
-                <div class="card-content">
-                  <p class="card-meta">SEP 19, 2014 / IDENTITY</p>
-                  <h3 class="card-title">CURSUS MALESUADA JUSTO</h3>
-                  <p class="card-snippet">
-                    Maecenas faucibus mollis interdum. Cum sociis natoque
-                    penatibus et magnis dis parturient montes, nascetur
-                    ridiculus mus. Nullam id dolor id nibh.
-                  </p>
-                </div>
-              </article>
-              <article class="journal-card">
-                <div class="card-image">
-                  <img src="../tasks/img/Business_Card_Mockup_2.jpg" alt="Blog post image 4" />
-                </div>
-                <div class="card-content">
-                  <p class="card-meta">SEP 27, 2014 / BRANDING</p>
-                  <h3 class="card-title">ORNARE CURSUS BIBENDUM PURUS</h3>
-                  <p class="card-snippet">
-                    Maecenas faucibus mollis interdum. Cum sociis natoque
-                    penatibus et magnis dis parturient montes, nascetur
-                    ridiculus mus. Nullam id dolor id nibh.
-                  </p>
-                </div>
-              </article>
+        <p>Some text</p>
 
         <!-- blocks(?) of items -->
 

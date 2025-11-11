@@ -1,0 +1,24 @@
+.container {
+  display: -webkit-box;
+  display: flex;
+  display: flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-place-content: center center;
+  -ms-flex-line-pack: center;
+  place-content: center center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+}
+
+.box1 {
+  flex-grow: 10;
+  flex: 10 5 450px;
+}
+
+.box2 {
+  flex-grow: 1;
+  flex: 1 1 360px;
+}
