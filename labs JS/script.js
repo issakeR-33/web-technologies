@@ -1,8 +1,8 @@
-let p = document.querySelector("p");
-p.textContent = "Hello World!"
+let div = document.getElementsByClassName('one-word')[0];
+div.textContent = "Hello World!";
 
-let button = document.querySelector("button")
+let button = document.getElementsByClassName('button')[0];
 
-button.ondblclick = function() {
-    alert(p.textContent);
+button.onmouseout = function () {
+    console.error("Nastya Demyanchuk");
 };
