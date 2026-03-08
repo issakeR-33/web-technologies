@@ -23,8 +23,10 @@ function transferGradeToTextShort(grade) {
     return grade >= 90 ? "Відмінно" :
            grade >= 75 ? "Добре" :
            grade >= 60 ? "Задовільно" : 
-           grade<=59 ?"Незадовільно":"Невірна оцінка";
+           grade<=59 ?"Незадовільно": "Погано";
 }
+
+
 
 console.log(transferGradeToTextShort(100),"\n");
 
