@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Завдання 1 – Лампочка</title>
+</head>
+<body>
+
+  <h2>Завдання 1 – Лампочка (className / classList)</h2>
+
+  <img id="bulb-img" src="../lab-5/img/off.png" alt="Лампочка" width="150">
+  <br><br>
+
+  <p id="status">Лампочка: <strong>ВИМКНЕНА</strong></p>
+
+  <label for="bulbType">Тип лампочки:</label>
+  <select id="bulbType" onchange="changeBulbType()">
+    <option value="regular">Звичайна</option>
+    <option value="eco">Енергозберігаюча</option>
+    <option value="led">Світлодіодна</option>
+  </select>
+  <br><br>
+
+  <button id="btn-toggle" onclick="toggleBulb()">Увімкнути</button>
+  <button id="btn-brightness" onclick="setBrightness()" disabled>Змінити яскравість</button>
+  <br><br>
+
+  <p id="brightness-info"></p>
+  <p id="timer-info"></p>
+
+
+
+<h2>Завдання 2 – Світлофор (setTimeout / setInterval)</h2>
+ 
+  <!-- Світлофор -->
+  <div id="traffic-light">
+    <div id="light-red"    class="light"></div>
+    <div id="light-yellow" class="light"></div>
+    <div id="light-green"  class="light"></div>
+  </div>
+ 
+  <p id="state-label">Стан: очікування</p>
+  <p id="timer-label"></p>
+ 
+  <br>
+  <button onclick="startTrafficLight()">▶ Старт</button>
+  <button onclick="stopTrafficLight()">⏹ Стоп</button>
+  <button onclick="nextState()">⏭ Наступний стан</button>
+  <button onclick="setDurations()">⚙ Змінити тривалість</button>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
