@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.traffic-light {
+    display: flex;
+    justify-content: start;
+    width: 200px;
+    height: 300px;
+    padding: 20px;
+}
+
+.traffic-light img {
+    display: none;
+}
+
+.traffic-light img.active {
+    display: block;
+}
+
+.buttons-control {
+    display: flex;
+    justify-content: start;
+    margin-top: 50px;
+}
+
+#change-red, #change-yellow, #change-green, #next-btn {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border-color: black;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#output {
+    text-align: start;
+    font-size: 24px;
+    margin-top: 20px;
+    margin-left: 50px;
+    color: reds;
+}

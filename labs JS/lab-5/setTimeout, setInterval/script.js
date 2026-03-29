@@ -1,153 +1,137 @@
-let red = document.querySelector('.red');
-let green = document.querySelector('.green');
-let yellow = document.querySelector('.yellow');
-let redBtn = document.querySelector('#change-red');
-let yellowBtn = document.querySelector('#change-yellow');
-let greenBtn = document.querySelector('#change-green');
-let text = document.getElementById('output');
-let nextBtn = document.getElementById('next-btn');
-let redTimeout, yellowTimeout, greenTimeout;
+const red     = document.querySelector('.red');
+const yellow  = document.querySelector('.yellow');
+const green   = document.querySelector('.green');
+const redBtn  = document.getElementById('change-red');
+const yellowBtn = document.getElementById('change-yellow');
+const greenBtn  = document.getElementById('change-green');
+const nextBtn   = document.getElementById('next-btn');
+const text      = document.getElementById('output');
+
+let redDuration    = 5000;
+let yellowDuration = 3000;
+let greenDuration  = 7000;
+
+let currentState = 'red';
+let cycleTimeout = null;
+
+// ─── Хелпери ────────────────────────────────────────────
 
 function hideAll() {
     red.classList.remove('active');
-    green.classList.remove('active');
     yellow.classList.remove('active');
+    green.classList.remove('active');
 }
 
-function showRed() {
-    redTimeout = setTimeout(() => {
-        hideAll();
-        red.classList.add('active');
-        text.textContent = 'Червоний';
-        text.style.color = 'red';
-    }, 0);
+function showState(state, color, label) {
+    hideAll();
+    document.querySelector(`.${state}`).classList.add('active');
+    text.textContent = label;
+    text.style.color = color;
+    currentState = state;
 }
 
-function showYellow() {
-    yellowTimeout = setTimeout(() => {
-        hideAll();
-        yellow.classList.add('active');
-        text.textContent = 'Жовтий';
-        text.style.color = 'yellow';
-    }, 3000);
+// ─── Миготливий жовтий ──────────────────────────────────
+
+function blinkYellow(callback) {
+    let count = 0;
+
+    function blink() {
+        if (count >= 3) {
+            callback();
+            return;
+        }
+        showState('yellow', 'yellow', 'Жовтий (мигає)');
+        cycleTimeout = setTimeout(() => {
+            hideAll();
+            text.textContent = '';
+            cycleTimeout = setTimeout(() => {
+                count++;
+                blink();
+            }, 300);
+        }, 300);
+    }
+
+    blink();
 }
 
-function showGreen() {
-    greenTimeout = setTimeout(() => {
-        hideAll();
-        green.classList.add('active');
-        text.textContent = 'Зелений';
-        text.style.color = 'green';
-    }, 7000);
+// ─── Цикл світлофора ─────────────────────────────────────
+
+function startCycle() {
+    clearTimeout(cycleTimeout);
+
+    showState('red', 'red', 'Червоний');
+
+    cycleTimeout = setTimeout(() => {
+        showState('yellow', 'yellow', 'Жовтий');
+
+        cycleTimeout = setTimeout(() => {
+            showState('green', 'green', 'Зелений');
+
+            cycleTimeout = setTimeout(() => {
+                blinkYellow(() => startCycle());
+            }, greenDuration);
+
+        }, yellowDuration);
+
+    }, redDuration);
 }
 
-let trafficLightInterval = setInterval(() => {
-    startTrafficLight();
-}, 12500);
+// ─── Зміна тривалості ────────────────────────────────────
 
 redBtn.addEventListener('click', () => {
-    clearInterval(trafficLightInterval);
-    clearTimeout(redTimeout);
-    let value = prompt('Enter time in seconds');
-    redTimeout = setTimeout(() => {
-        hideAll();
-        red.classList.add('active');
-        text.textContent = 'Червоний';
-        text.style.color = 'red';
-        trafficLightInterval = setInterval(() => {
-            startTrafficLight();
-        }, 12500);
-    }, value * 1000);
+    const value = prompt('Введіть тривалість червоного (в секундах):', redDuration / 1000);
+    if (value === null) return;
+    const num = parseFloat(value);
+    if (isNaN(num) || num <= 0) { alert('Введіть позитивне число.'); return; }
+    redDuration = num * 1000;
+    startCycle();
 });
 
 yellowBtn.addEventListener('click', () => {
-    clearInterval(trafficLightInterval);
-    clearTimeout(yellowTimeout);
-    let value = prompt('Enter time in seconds');
-    yellowTimeout = setTimeout(() => {
-        hideAll();
-        yellow.classList.add('active');
-        text.textContent = 'Жовтий';
-        text.style.color = 'yellow';
-        trafficLightInterval = setInterval(() => {
-            startTrafficLight();
-        }, 12500);
-    }, value * 1000);
+    const value = prompt('Введіть тривалість жовтого (в секундах):', yellowDuration / 1000);
+    if (value === null) return;
+    const num = parseFloat(value);
+    if (isNaN(num) || num <= 0) { alert('Введіть позитивне число.'); return; }
+    yellowDuration = num * 1000;
+    startCycle();
 });
 
 greenBtn.addEventListener('click', () => {
-    clearInterval(trafficLightInterval);
-    clearTimeout(greenTimeout);
-    let value = prompt('Enter time in seconds');
-    greenTimeout = setTimeout(() => {
-        hideAll();
-        green.classList.add('active');
-        text.textContent = 'Зелений';
-        text.style.color = 'green';
-        trafficLightInterval = setInterval(() => {
-            startTrafficLight();
-        }, 12500);
-    }, value * 1000);
+    const value = prompt('Введіть тривалість зеленого (в секундах):', greenDuration / 1000);
+    if (value === null) return;
+    const num = parseFloat(value);
+    if (isNaN(num) || num <= 0) { alert('Введіть позитивне число.'); return; }
+    greenDuration = num * 1000;
+    startCycle();
 });
 
-function showRedNow() {
-    hideAll();
-    red.classList.add('active');
-    text.textContent = 'Червоний';
-    text.style.color = 'red';
-}
-function showYellowNow() {
-    hideAll();
-    yellow.classList.add('active');
-    text.textContent = 'Жовтий';
-    text.style.color = 'yellow';
-}
-function showGreenNow() {
-    hideAll();
-    green.classList.add('active');
-    text.textContent = 'Зелений';
-    text.style.color = 'green';
-}
+// ─── Наступний стан вручну ───────────────────────────────
 
 nextBtn.addEventListener('click', () => {
-    clearInterval(trafficLightInterval);
-    if (red.classList.contains('active')) {
-        hideAll();
-        clearTimeout(redTimeout);
-        showYellowNow();
-    }
-    else if (yellow.classList.contains('active')) {
-        hideAll();
-        clearTimeout(yellowTimeout);
-        showGreenNow();
-    }
-    else if (green.classList.contains('active')) {
-        hideAll();
-        clearTimeout(greenTimeout);
-        showRedNow();
+    clearTimeout(cycleTimeout);
+
+    if (currentState === 'red') {
+        showState('yellow', 'yellow', 'Жовтий');
+        cycleTimeout = setTimeout(() => {
+            showState('green', 'green', 'Зелений');
+            cycleTimeout = setTimeout(() => {
+                blinkYellow(() => startCycle());
+            }, greenDuration);
+        }, yellowDuration);
+
+    } else if (currentState === 'yellow') {
+        showState('green', 'green', 'Зелений');
+        cycleTimeout = setTimeout(() => {
+            blinkYellow(() => startCycle());
+        }, greenDuration);
+
+    } else if (currentState === 'green') {
+        blinkYellow(() => startCycle());
+
+    } else {
+        startCycle();
     }
 });
 
-function blinkYellow(startTime) {
-    for (let i = 0; i < 3; i++) {
-        yellowTimeout = setTimeout(() => {
-            hideAll();
-            yellow.classList.add('active');
-            text.textContent = 'Жовтий';
-            text.style.color = 'yellow';
-        }, startTime + i * 500);
-        greenTimeout = setTimeout(() => {
-            hideAll();
-            text.textContent = '';
-        }, startTime + i * 500 + 250);
-    }
-}
-
-function startTrafficLight() {
-    showRed();
-    showYellow();
-    showGreen();
-    blinkYellow(11000);
-}
-
-startTrafficLight();
+// ─── Старт ───────────────────────────────────────────────
+startCycle();

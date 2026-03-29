@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h2 {
+    margin: 20px 0 10px;
+}
+
+/* ── Годинник ── */
+.clock {
+    display: flex;
+    gap: 4px;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+/* ── Таймер ── */
+.timer-display {
+    display: flex;
+    gap: 4px;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.timer-button {
+    margin-top: 10px;
+}
+
+.timer-button button {
+    padding: 10px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: indigo;
+    color: white;
+    border: none;
+    border-radius: 6px;
+}
+
+.timer-button button:hover {
+    background-color: darkslateblue;
+}
+
+/* ── Календар ── */
+.calendar {
+    margin-top: 10px;
+}
+
+.calendar-controls {
+    margin-bottom: 10px;
+}
+
+.calendar-controls input {
+    padding: 6px;
+    font-size: 16px;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 40px);
+    gap: 4px;
+}
+
+.day-cell {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.day-cell.filled {
+    background-color: #f0f0f0;
+}
+
+/* ── День народження ── */
+.birthday-container {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.birthday-container input {
+    padding: 6px;
+    font-size: 16px;
+    width: fit-content;
+}
+
+#bday-result {
+    font-size: 18px;
+    font-weight: bold;
+    color: indigo;
+}
