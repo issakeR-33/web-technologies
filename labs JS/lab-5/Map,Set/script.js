@@ -68,3 +68,43 @@ function addHistory(product, date) {
         history.set(product, []);
     }
     history.get(product).push(date);}
+
+    // ========== DEMO ==========
+
+// Додаємо продукти
+addProduct(1, 'Apple', 10, 5);
+addProduct(2, 'Banana', 5, 3);
+addProduct(3, 'Orange', 8, 10);
+console.log('=== Каталог після додавання ===');
+products.forEach((p, id) => console.log(`[${id}] ${p.name} | ціна: ${p.price} | кількість: ${p.count}`));
+
+// Пошук за назвою
+console.log('\n=== Пошук "Banana" ===');
+console.log(findByName('Banana'));
+
+// Оновлення продукту
+console.log('\n=== Оновлення Apple (нова ціна: 15, кількість: 8) ===');
+updateProduct(1, 15, 8);
+const apple = products.get(1);
+console.log(`Apple -> ціна: ${apple.price}, кількість: ${apple.count}`);
+
+// Замовлення
+console.log('\n=== Замовлення Orange ===');
+isBought(3);
+const orange = products.get(3);
+console.log(`Orange після замовлення -> кількість: ${orange.count}`);
+
+// Замовлення з відстеженням у Set
+console.log('\n=== Замовлення Banana через isBoughtOneMore ===');
+isBoughtOneMore(2);
+console.log('Замовлені продукти (Set):', [...orderedProducts].map(p => p.name).join(', '));
+
+// Видалення
+console.log('\n=== Видалення продукту з id=2 ===');
+deleteProduct(2);
+console.log('Каталог після видалення:');
+products.forEach((p, id) => console.log(`[${id}] ${p.name} | ціна: ${p.price} | кількість: ${p.count}`));
+
+// Пошук видаленого
+console.log('\n=== Пошук видаленого "Banana" ===');
+findByName('Banana');

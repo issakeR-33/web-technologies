@@ -1,4 +1,3 @@
-// Елементи лампочок
 const defaultBlubOn = document.querySelector('.default-on');
 const defaultBlubOff = document.querySelector('.default-off');
 const energySavingBlubOn = document.querySelector('.energy-saving-on');
@@ -6,19 +5,17 @@ const energySavingBlubOff = document.querySelector('.energy-saving-off');
 const ledBlubOn = document.querySelector('.led-on');
 const ledBlubOff = document.querySelector('.led-off');
 
-// Кнопки вибору типу
+//тип
 const defaultButton = document.querySelector('.default-button');
 const energySavingButton = document.querySelector('.energy-saving-button');
 const ledButton = document.querySelector('.led-button');
 
-// Кнопки вмикання/вимикання
+// Кнопки 
 const onButton = document.querySelector('.on-button');
 const offButton = document.querySelector('.off-button');
 
-// Кнопка яскравості
 const brightnessButton = document.querySelector('.brightness-button');
 
-// Інформаційні блоки
 const statusInfo = document.querySelector('.status-info');
 const brightnessInfo = document.querySelector('.brightness-info');
 const timerInfo = document.querySelector('.timer-info');
@@ -26,7 +23,6 @@ const timerInfo = document.querySelector('.timer-info');
 let inactivityTimer = null;
 const INACTIVITY_MS = 5 * 60 * 1000;
 
-// ─── Хелпери ────────────────────────────────────────────
 
 function hideAllBulbs() {
     [defaultBlubOn, defaultBlubOff,
@@ -75,7 +71,6 @@ function updateStatus() {
     }
 }
 
-// ─── Таймер бездіяльності ────────────────────────────────
 
 function resetInactivityTimer() {
     clearTimeout(inactivityTimer);
@@ -98,7 +93,6 @@ function resetInactivityTimer() {
     })
 );
 
-// ─── Вибір типу лампочки ─────────────────────────────────
 
 defaultButton.addEventListener('click', () => {
     hideAllBulbs();
@@ -118,7 +112,6 @@ ledButton.addEventListener('click', () => {
     updateStatus();
 });
 
-// ─── Вмикання / Вимикання ────────────────────────────────
 
 onButton.addEventListener('click', () => {
     const active = getActiveBulb();
@@ -146,7 +139,7 @@ offButton.addEventListener('click', () => {
     updateStatus();
 });
 
-// ─── Яскравість ──────────────────────────────────────────
+// 
 
 brightnessButton.addEventListener('click', () => {
     const active = getActiveBulb();

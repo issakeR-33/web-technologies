@@ -14,7 +14,6 @@ let greenDuration  = 7000;
 let currentState = 'red';
 let cycleTimeout = null;
 
-// ─── Хелпери ────────────────────────────────────────────
 
 function hideAll() {
     red.classList.remove('active');
@@ -30,7 +29,6 @@ function showState(state, color, label) {
     currentState = state;
 }
 
-// ─── Миготливий жовтий ──────────────────────────────────
 
 function blinkYellow(callback) {
     let count = 0;
@@ -54,8 +52,6 @@ function blinkYellow(callback) {
     blink();
 }
 
-// ─── Цикл світлофора ─────────────────────────────────────
-
 function startCycle() {
     clearTimeout(cycleTimeout);
 
@@ -76,7 +72,7 @@ function startCycle() {
     }, redDuration);
 }
 
-// ─── Зміна тривалості ────────────────────────────────────
+// тривалicть
 
 redBtn.addEventListener('click', () => {
     const value = prompt('Введіть тривалість червоного (в секундах):', redDuration / 1000);
@@ -105,8 +101,6 @@ greenBtn.addEventListener('click', () => {
     startCycle();
 });
 
-// ─── Наступний стан вручну ───────────────────────────────
-
 nextBtn.addEventListener('click', () => {
     clearTimeout(cycleTimeout);
 
@@ -115,23 +109,22 @@ nextBtn.addEventListener('click', () => {
         cycleTimeout = setTimeout(() => {
             showState('green', 'green', 'Зелений');
             cycleTimeout = setTimeout(() => {
-                blinkYellow(() => startCycle());
+                startCycle(); // одразу починаємо цикл (червоний)
             }, greenDuration);
         }, yellowDuration);
 
     } else if (currentState === 'yellow') {
         showState('green', 'green', 'Зелений');
         cycleTimeout = setTimeout(() => {
-            blinkYellow(() => startCycle());
+            startCycle();
         }, greenDuration);
 
     } else if (currentState === 'green') {
-        blinkYellow(() => startCycle());
+        startCycle(); // одразу на червоний, без блимання
 
     } else {
         startCycle();
     }
 });
 
-// ─── Старт ───────────────────────────────────────────────
 startCycle();
