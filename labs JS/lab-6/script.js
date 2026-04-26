@@ -1,4 +1,3 @@
-'use strict';
 
 /* ─────────────────── UTILS ─────────────────── */
 const generateId = () => `${Date.now()}-${Math.random().toString(36).slice(2, 7)}`;
@@ -27,7 +26,6 @@ let products = [
 let activeFilter = null;
 let activeSort   = null;
 
-/* ─────────────────── DOM REFS ─────────────────── */
 const $productList    = document.getElementById('js-product-list');
 const $emptyState     = document.getElementById('js-empty-state');
 const $productCount   = document.getElementById('js-product-count');
@@ -52,7 +50,6 @@ const $aside          = document.getElementById('js-aside');
 const $asideClose     = document.getElementById('js-aside-close');
 const $blurOverlay    = document.getElementById('js-blur-overlay');
 
-/* ─────────────────── PURE FUNCTIONS ─────────────────── */
 const addProduct = (products, productData) => {
   const newProduct = {
     id:        generateId(),
@@ -99,7 +96,6 @@ const calculateTotalPrice = (products) =>
 const getFilteredAndSorted = (products, filter, sort) =>
   sortProducts(filterProducts(products, filter), sort);
 
-/* ─────────────────── UI HELPERS ─────────────────── */
 const showSnackbar = (message, type = 'success') => {
   const el = document.createElement('div');
   el.className = `snackbar ${type}`;
@@ -128,7 +124,6 @@ const openEditModal = (productId) => {
   toggleModal(true, true);
 };
 
-/* ─────────────────── RENDER ─────────────────── */
 const createProductCard = (product) => {
   const li = document.createElement('li');
   li.className = 'product-card';
@@ -182,7 +177,7 @@ const refreshProductList = () => {
   updateSortButtons();
 };
 
-/* ─────────────────── ACTIONS ─────────────────── */
+/* ───────────────────────────────────── */
 const handleAddOrEdit = (e) => {
   e.preventDefault();
   if (!$productForm.checkValidity()) { $productForm.reportValidity(); return; }
@@ -218,7 +213,6 @@ const deleteProductWithAnimation = (productId) => {
   }, { once: true });
 };
 
-/* ─────────────────── EVENTS ─────────────────── */
 $productList.addEventListener('click', (e) => {
   const editBtn   = e.target.closest('.edit-btn');
   const deleteBtn = e.target.closest('.delete-btn');
@@ -250,7 +244,7 @@ $modalBackdrop.addEventListener('click', (e) => {
   if (e.target === $modalBackdrop) toggleModal(false);
 });
 
-/* ─── Aside drawer ─── */
+/*Aside navbar */
 const openAside  = () => {
   $aside.classList.add('open');
   $blurOverlay.classList.add('open');
@@ -263,10 +257,8 @@ $burgerBtn.addEventListener('click', openAside);
 $asideClose.addEventListener('click', closeAside);
 $blurOverlay.addEventListener('click', closeAside);
 
-/* ─── Escape key ─── */
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') { toggleModal(false); closeAside(); }
 });
 
-/* ─────────────────── INIT ─────────────────── */
 refreshProductList();

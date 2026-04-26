@@ -1,4 +1,4 @@
-/* ─── Reset & Variables ─── */
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 @font-face {
@@ -28,7 +28,7 @@
   --radius:      18px;
   --header-h:    56px;
   --footer-h:    52px;
-  --font:        'e-Ukraine', serif;
+  --font:        'e-Ukraine';
   --font-ui:     'e-Ukraine', sans-serif;
 }
 
@@ -41,7 +41,6 @@ body {
   flex-direction: column;
 }
 
-/* ─── Header ─── */
 header {
   position: sticky;
   top: 0;
@@ -75,7 +74,6 @@ header {
   letter-spacing: .03em;
 }
 
-/* ─── Main layout ─── */
 .layout {
   flex: 1;
   display: grid;
@@ -84,7 +82,7 @@ header {
   position: relative;
 }
 
-/* ─── Blur overlay (behind drawer, above products) ─── */
+/*Blur overlay*/
 .layout-blur-overlay {
   display: none;
   position: fixed;
@@ -102,7 +100,7 @@ header {
   opacity: 1;
 }
 
-/* ─── Aside drawer (filters + sort) ─── */
+/* Aside drawer */
 aside {
   position: fixed;
   top: var(--header-h); bottom: var(--footer-h); left: 0;
@@ -171,7 +169,6 @@ aside.open { transform: translateX(0); }
 .reset-btn { color: var(--muted); border-style: dashed; margin-top: 2px; }
 .reset-btn:hover { color: var(--danger); border-color: var(--danger); background: var(--danger-lt); }
 
-/* ─── Controls bar ─── */
 .controls-bar {
   padding: 14px 20px;
   display: flex; align-items: center; justify-content: space-between;
@@ -193,7 +190,6 @@ aside.open { transform: translateX(0); }
 }
 .add-btn:hover { opacity: .85; }
 
-/* ─── Product Grid ─── */
 .products-section { padding: 20px; overflow-y: auto; }
 
 .empty-state {
@@ -212,7 +208,6 @@ aside.open { transform: translateX(0); }
   gap: 16px;
 }
 
-/* ─── Product Card ─── */
 .product-card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -268,7 +263,6 @@ aside.open { transform: translateX(0); }
 .delete-btn { background: var(--danger-lt); color: var(--danger); }
 .edit-btn:hover, .delete-btn:hover { opacity: .8; }
 
-/* ─── Footer ─── */
 footer {
   position: sticky; bottom: 0; z-index: 100;
   height: var(--footer-h);
@@ -277,7 +271,6 @@ footer {
   font-size: 17px; font-weight: 700; letter-spacing: .04em;
 }
 
-/* ─── Modal ─── */
 .modal-backdrop {
   display: none;
   position: fixed; inset: 0; z-index: 300;
@@ -348,7 +341,6 @@ footer {
   font-size: 14px; font-weight: 600;
 }
 
-/* ─── Snackbar ─── */
 #js-snackbar-container {
   position: fixed; bottom: 70px; right: 16px;
   z-index: 500; display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
@@ -377,7 +369,6 @@ footer {
   to   { opacity: 0; transform: translateX(40px); }
 }
 
-/* ─── Responsive ─── */
 @media (max-width: 768px) {
   #js-product-list { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
 }

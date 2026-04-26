@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Список завдань</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ═══ HEADER ═══════════════════════════════════════════════════════════ -->
+<header>
+  <span class="site-title"> To-Do List</span>
+  <span class="header-stats" id="js-header-stats">Виконано: 0 / 0</span>
+</header>
+
+<!-- ═══ MAIN ══════════════════════════════════════════════════════════════ -->
+<main class="layout">
+
+  <!-- Add task form -->
+  <section class="add-section">
+    <form id="js-add-form" novalidate>
+      <input
+        id="js-task-input"
+        type="text"
+        placeholder="Введіть нове завдання..."
+        required
+        minlength="2"
+        maxlength="200"
+        autocomplete="off"
+      />
+      <button type="submit" class="add-btn">+ Додати</button>
+    </form>
+  </section>
+
+  <!-- Sort bar -->
+  <div class="sort-bar">
+    <span class="sort-label">Сортування:</span>
+    <div class="sort-buttons">
+      <button class="sort-btn" data-sort="createdAt">За датою додавання</button>
+      <button class="sort-btn" data-sort="done">За виконанням</button>
+      <button class="sort-btn" data-sort="updatedAt">За датою оновлення</button>
+      <button class="reset-btn" id="js-reset-sort">Скинути</button>
+    </div>
+  </div>
+
+  <!-- Empty state -->
+  <div class="empty-state visible" id="js-empty-state">
+    <p>Список завдань порожній.<br>Додайте перше завдання!</p>
+  </div>
+
+  <!-- Task list -->
+  <ul id="js-task-list" role="list"></ul>
+
+</main>
+
+<!-- ═══ FOOTER ══════════════════════════════════════════════════════════ -->
+<footer>
+</footer>
+
+<!-- ═══ EDIT MODAL ════════════════════════════════════════════════════════ -->
+<div class="modal-backdrop" id="js-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="js-modal-title">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="modal-title" id="js-modal-title">Редагувати завдання</span>
+      <button class="modal-close" id="js-modal-close" aria-label="Закрити">✕</button>
+    </div>
+    <form id="js-edit-form" novalidate>
+      <div class="modal-body">
+        <input type="hidden" id="js-edit-id" />
+        <div class="form-group">
+          <label for="js-edit-input">Текст завдання *</label>
+          <input id="js-edit-input" type="text" required minlength="2" maxlength="200" placeholder="Введіть текст завдання" />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-cancel" id="js-modal-cancel">Скасувати</button>
+        <button type="submit" class="btn-submit">Зберегти</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- ═══ SNACKBAR ═════════════════════════════════════════════════════════ -->
+<div id="js-snackbar-container" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
