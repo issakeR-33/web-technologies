@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Programming Languages Slider</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,600;1,300&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="page-wrapper">
+    <header class="page-header">
+      <h1 class="logo">Slider</h1>
+    </header>
+
+    <section class="demo-section">
+      <div
+        id="slider-gallery"
+        class="slider-container"
+        data-autoplay="true"
+        data-duration="600"
+        data-show-arrows="true"
+        data-show-dots="true"
+        data-autoplay-interval="4000"
+      >
+        <div class="slider-track-wrapper">
+          <div class="slider-track">
+            <!-- HTML Slide -->
+            <div class="slide" data-label="HTML" data-color="#f06529">
+              <div class="slide-bg" style="background: linear-gradient(135deg, #e34c26, #f06529, #242938);">
+                <div class="slide-content">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML Logo" class="slide-icon">
+                  <h3>HTML</h3>
+                  <p>Фундамент інтернету. Мова гіпертекстової розмітки для створення структури веб-сторінок.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- CSS Slide -->
+            <div class="slide" data-label="CSS" data-color="#2965f1">
+              <div class="slide-bg" style="background: linear-gradient(135deg, #264de4, #2965f1, #1a1a2e);">
+                <div class="slide-content">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS Logo" class="slide-icon">
+                  <h3>CSS</h3>
+                  <p>Каскадні таблиці стилів, що роблять веб-сторінки візуально привабливими та адаптивними.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- JS Slide -->
+            <div class="slide" data-label="JavaScript" data-color="#f7df1e">
+              <div class="slide-bg" style="background: linear-gradient(135deg, #20232a, #323330, #f7df1e);">
+                <div class="slide-content">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JS Logo" class="slide-icon" style="border-radius: 8px;">
+                  <h3 style="color: #fff; text-shadow: 1px 1px 4px rgba(0,0,0,0.7);">JavaScript</h3>
+                  <p style="color: #fff; text-shadow: 1px 1px 4px rgba(0,0,0,0.7);">Потужна мова програмування, що додає інтерактивність та динаміку до веб-додатків.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Java Slide -->
+            <div class="slide" data-label="Java" data-color="#e35232">
+              <div class="slide-bg" style="background: linear-gradient(135deg, #007396, #5382a1, #e35232);">
+                <div class="slide-content">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java Logo" class="slide-icon">
+                  <h3>Java</h3>
+                  <p>Надійна об'єктно-орієнтована мова для створення складних корпоративних систем та мобільних додатків.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="slider-arrow slider-arrow--prev" aria-label="Попередній слайд">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <button class="slider-arrow slider-arrow--next" aria-label="Наступний слайд">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+
+        <div class="slider-dots"></div>
+        <div class="slider-pagination"></div>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initSlider('slider-gallery');
+    });
+  </script>
+</body>
+</html>

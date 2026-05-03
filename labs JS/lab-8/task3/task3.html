@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trello-like Kanban Board</title>
+  <link rel="stylesheet" href="task3.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <header class="kanban-header">
+      <div>
+        <h1>Kanban Board</h1>
+      </div>
+      <button id="edit-btn" class="btn-primary">Редагувати</button>
+    </header>
+
+    <main class="trello-board" id="board">
+      
+      <!-- Колонка 1: Треба зробити -->
+      <div class="trello-column">
+        <h3 class="column-header">
+          Треба вивчити <span class="badge">4</span>
+        </h3>
+        <div class="column-body">
+          <div class="card" draggable="true">
+            <button class="delete-btn" aria-label="Видалити">✖</button>
+            <div class="card-title">JavaScript</div>
+          </div>
+          <div class="card" draggable="true">
+            <button class="delete-btn" aria-label="Видалити">✖</button>
+            <div class="card-title">Rust</div>
+          </div>
+          <div class="card" draggable="true">
+            <button class="delete-btn" aria-label="Видалити">✖</button>
+            <div class="card-title">Go</div>
+          </div>
+          <div class="card" draggable="true">
+            <button class="delete-btn" aria-label="Видалити">✖</button>
+            <div class="card-title">Swift</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Колонка 2: В процесі -->
+      <div class="trello-column">
+        <h3 class="column-header">
+          В процесі <span class="badge">2</span>
+        </h3>
+        <div class="column-body">
+          <div class="card" draggable="true">
+            <button class="delete-btn" aria-label="Видалити">✖</button>
+            <div class="card-title">Python</div>
+          </div>
+          <div class="card" draggable="true">
+            <button class="delete-btn" aria-label="Видалити">✖</button>
+            <div class="card-title">TypeScript</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Колонка 3: Готово -->
+      <div class="trello-column">
+        <h3 class="column-header">
+          Вивчено <span class="badge">2</span>
+        </h3>
+        <div class="column-body">
+          <div class="card" draggable="true">
+            <button class="delete-btn" aria-label="Видалити">✖</button>
+            <div class="card-title">Java</div>
+          </div>
+          <div class="card" draggable="true">
+            <button class="delete-btn" aria-label="Видалити">✖</button>
+            <div class="card-title">Kotlin</div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="task3.js"></script>
+</body>
+</html>

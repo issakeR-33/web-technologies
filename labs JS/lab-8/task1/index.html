@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Pair Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>MEMORY GAME</h1>
+
+<!-- SETTINGS -->
+<div id="settings-panel">
+  <h2>Налаштування гри</h2>
+  <div class="settings-row">
+
+    <div class="setting-group">
+      <label>Гравці</label>
+      <select id="player-count" onchange="updatePlayerInputs()">
+        <option value="1">1 гравець</option>
+        <option value="2">2 гравці</option>
+      </select>
+    </div>
+
+    <div class="setting-group players-section" id="player-names">
+      <div class="setting-group">
+        <label>Гравець 1</label>
+        <input type="text" id="p1-name" class="player-input" value="Гравець 1" placeholder="Ім'я">
+      </div>
+      <div class="setting-group" id="p2-group" style="display:none">
+        <label>Гравець 2</label>
+        <input type="text" id="p2-name" class="player-input" value="Гравець 2" placeholder="Ім'я">
+      </div>
+    </div>
+
+    <div class="setting-group">
+      <label>Поле</label>
+      <select id="grid-size">
+        <option value="4x4">4 × 4</option>
+        <option value="4x5">4 × 5</option>
+        <option value="4x6">4 × 6</option>
+        <option value="5x6">5 × 6</option>
+        <option value="6x6">6 × 6</option>
+      </select>
+    </div>
+
+    <div class="setting-group">
+      <label>Складність</label>
+      <select id="difficulty">
+        <option value="easy">Easy</option>
+        <option value="normal">Normal</option>
+        <option value="hard">Hard</option>
+      </select>
+    </div>
+
+    <div class="setting-group">
+      <label>Раундів</label>
+      <input type="number" id="rounds-count" value="1" min="1" max="10" style="width:70px">
+    </div>
+
+  </div>
+
+  <div class="settings-buttons">
+    <button class="btn btn-yellow" onclick="startGame()">Розпочати гру</button>
+    <button class="btn btn-outline" onclick="resetSettings()">Скинути налаштування</button>
+  </div>
+</div>
+
+<!-- HUD -->
+<div id="hud">
+  <div class="hud-box">
+    <div class="label">Раунд</div>
+    <div class="value" id="hud-round">1/1</div>
+  </div>
+  <div class="hud-box" id="timer-box">
+    <div class="label">Час</div>
+    <div class="value" id="hud-timer">—</div>
+  </div>
+  <div class="hud-box">
+    <div class="label">Ходи</div>
+    <div class="value" id="hud-moves">0</div>
+  </div>
+  <div class="hud-box">
+    <div class="label">Пари</div>
+    <div class="value" id="hud-pairs">0/0</div>
+  </div>
+  <div class="player-turn-indicator" id="turn-indicator">Натисніть "Розпочати гру"</div>
+</div>
+
+<!-- BOARD -->
+<div id="game-board"></div>
+
+<!-- BOTTOM BAR -->
+<div id="bottom-bar">
+  <button class="btn btn-outline" onclick="restartRound()">Рестарт</button>
+</div>
+
+<!-- OVERLAY -->
+<div id="overlay">
+  <div class="overlay-box" id="overlay-box">
+    <h2 id="overlay-title"></h2>
+    <div id="overlay-content"></div>
+    <div class="overlay-buttons" id="overlay-buttons"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
